@@ -24,7 +24,9 @@ table, th, td{
  border: 1px solid black;
 }
 .img2{
-   width:10px; height:20px;
+  padding:2px;
+ width:95px; height:113px;
+  position:absolute;left:70vw;top:70vw;
 }
  .p3{
   font-weight:800;
