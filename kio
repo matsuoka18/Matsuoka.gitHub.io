@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <script type="text/javascript" charset="UTF-8"></script>
+  </head>
+  <body>
+    <p>
+      <h2>メール送信フォーム</h2>
+    </p>
+    <form action="./confirm.php" method="post">
+      <p>
+        送信先
+      </p>
+      <input type="text" name="to">
+      <p>
+        メールのタイトル
+      </p>
+      <input type="text" name="title">
+      <p>
+        本文
+      </p>
+      <textarea name="content" cols="50" rows="5"></textarea>
+      <p>
+        <input type="submit" name="send" value="送信">
+      </p>
+    </form>
+    <?php
+      mb_language("Japanese");
+      mb_internal_encoding("UTF-8");
+      $to = $_POST['to'];
+      $title = $_POST['title'];
+      $content = $_POST['content'];
+      if(mb_send_mail($to, $title, $content)){
+        echo "メールを送信しました";
+      } else {
+        echo "メールの送信に失敗しました";
+      };
+    ?>
+  </body>
+</html>
