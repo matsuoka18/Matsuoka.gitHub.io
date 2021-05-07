@@ -1,4 +1,4 @@
-function divv(){
+function {
 var media = document.getElementById("au1");
 media.load();
 media.play();
