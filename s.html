@@ -16,6 +16,10 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 
     <script>
+      history.pushState(null, null, location.href);
+window.addEventListener('popstate', (e) => {
+  history.go(1);
+});
   function div(){
     document.getElementById("au").load();
     document.getElementById("au").play();
