@@ -6,7 +6,7 @@
   <title>しゅ</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
+<body onload="onsei();">
 
   <div onclick="div()" style="width:200px;height:200px;background-color:black;"></div>
   <audio id="au">
@@ -20,9 +20,10 @@
 window.addEventListener('popstate', (e) => {
   history.go(1);
 });
-   window.onload = function(){
-    document.getElementById("au").load();
-    document.getElementById("au").autoplay();
+   function onsei(){
+     document.getElementById("au").load();
+    document.getElementById("au").play();
+   window.onload = onsei;
   };
   function div(){
     document.getElementById("au").load();
