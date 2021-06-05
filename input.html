@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>input practice</title>
+</head>
+<body>
+<h1 style="font-family:monospace;">パスワード認証ページ</h1>
+<p>
+<label style="font-family:monospace;">password<input type="text" id="nema1"value=""></label>
+<input type="button" value="認証" id="namecheck">
+</p>
+<p id="write"></p>
+<script>
+function koi(){
+ if(nema1.value === "mko"){
+ location.href="mko.html"
+}else{
+ alert('違います');
+}
+}
+let nema1 = document.getElementById('nema1');
+let write = document.getElementById('write');
+
+let namecheck = document.getElementById('namecheck');
+namecheck.addEventListener('click',koi);
+</script>
+</body>
+</html>
