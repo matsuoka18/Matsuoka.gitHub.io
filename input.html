@@ -6,13 +6,16 @@
  <meta name="viewport" content="width=device-width" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
  <meta name="viewport" content="width=device-width,initial-scale=1">
+ <link rel="stylesheet" href="inp1.css" media="screen and (max-width:760px)">
+ <link rel="stylesheet" href="inp3.css" media="screen and (min-width:800px)">
 </head>
 <body>
 <h1 class="h1"style="font-family:monospace;">パスワード認証ページ</h1>
 <font size="4">
  <p class="p1">
 <label class="p2"style="font-family:monospace;">パスワード<input type="text" id="nema1"value=""></label>
- <div style="position:absolute;left:1vw;top:80vw;font-family:monospace;background-color:black;color:white;font-size:15px;width:60px;padding:5px;border-radius:10px;text-align:center;" onclick="koi()">認証</div>
+  <input type="button" id="namecheck" value="認証">
+ <div class="d1" onclick="koi()">認証</div>
 </p>
  </font>
 <p id="write"></p>
