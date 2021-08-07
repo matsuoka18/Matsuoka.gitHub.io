@@ -1,9 +1,14 @@
-
 body {
  margin: 0;
 }
+table, th, td{
+ border: 1px solid black;
+}
 .h1{
-margin-top: 0;
+border-bottom:2px solid;
+text-align:center;
+font-weight:500;
+margin: 0;
 width:100vw;
 background-color:skyblue;
 }
@@ -20,18 +25,27 @@ font-weight:500;
 .img1{
 width:100vw;height:50vw;
 }
-table, th, td{
- border: 1px solid black;
-}
- .img2{
+
+.img2{
   padding:2px;
-  width:95px; height:113px;
-  position:absolute;left:70vw;top:70vw;
- }
+ width:150px; height:170px;
+  position:absolute;left:35%;top:80%;
+}
  .p3{
   font-weight:800;
  }
-.img3{
- width:1px;height:0px;
+
+.button1{
+border-right:1px solid;
+border-left:none;
+border-top:none;
+border-bottom:none;
+background-color:skyblue;
+color:black;
+height:10vw;
+width:24.7vw;
+}
+.button1:hover{
+background-color:white;
 }
 
