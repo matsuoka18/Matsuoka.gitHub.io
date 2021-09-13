@@ -50,4 +50,9 @@ width:24.7vw;
 .button1:hover{
 background-color:white;
 }
-
+.b1{
+ width:100vw;height:10vw;background-color:skyblue;margin:0;
+}
+.s1{
+font-size:5px;
+}
