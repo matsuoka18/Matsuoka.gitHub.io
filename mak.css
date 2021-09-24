@@ -58,3 +58,53 @@ font-weight:500;
 font-size:30px;
 
 }
+.gnav {
+    margin-let:150px;
+    margin-top:0;
+    margin-bottom:0;
+    magin-right:0;
+    display: flex;
+    height: 2rem;
+    width: 600px;
+}
+.gnav > li {/*親階層のみ幅を25%にする*/
+    width: 25%;  
+}
+/*全てのリスト・リンク共通*/
+.gnav li {
+    list-style: none;
+    position: relative;
+}
+.gnav li a {
+    background: #001b34;
+    border-right: 1px solid #eee;
+    color: #fff;
+    display: block;
+    height: 2rem;
+    line-height: 2rem;
+    text-align: center;
+    text-decoration: none;
+    width: 150px;
+}
+.gnav li li {
+    height: 0;
+    overflow: hidden;
+    transition: .3s;
+}
+.gnav li li a {
+    border-top: 1px solid #eee;
+}
+.gnav li:hover > ul > li {
+    height: 2rem;
+    overflow: visible;
+}
+.ul1{
+border-top:1px solid;
+border-bottom:1px solid;
+border-left:none;
+border-right:none;
+width:100vw;
+height:2.1rem;
+background-color:skyblue;
+}
+
