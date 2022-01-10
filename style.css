@@ -1,0 +1,193 @@
+/* ===== Webサイト全体のスタイル ===== */
+/* html */
+html {
+  height: 100%;
+}
+
+/* body */
+body {
+  font-family:monospace;
+  height: 100%;
+  margin: 0;
+}
+
+/* h1見出し */
+.h1{
+  position:absolute;top:0px;
+  font-size:20px;
+  color:white;
+  border-bottom:1px solid;
+}
+
+/* ===== ヘッダーのスタイル ===== */
+/* ヘッダーの箱 */
+
+header {
+  background-image: url(img/pic3.jpg);/* 背景画像 */
+  height: 450px;/* 高さ */
+  padding-top: 150px;
+  background-size:cover;
+   font-weight:600;
+}
+.img1{
+  width:250px;
+  position:absolute;top:0px;
+  margin-top:25px;
+  margin-left:10px;
+}
+.div1{
+  position:absolute;top:0px;left:65%;
+  display:inline-block;
+}
+.p1{
+  display:inline-block;
+  margin-left:10px;
+  margin-top:25px;
+}
+.p1:hover{
+  color:gray;
+}
+.hov{
+  display:inline-block;
+}
+.p2{
+  display:inline-block;
+  margin-left:10px;
+  margin-top:25px;
+  transition: color 2s, background-color 2s,transform 2s;
+}
+.p2:hover {
+  color:gray;
+  background-color:white;
+}
+
+.p3{
+  position:absolute;
+  opacity: 0;
+  padding:0px;
+  margin:0px;
+  transition:transform 1s,opacity 1s;
+}
+
+.p4{
+  position:absolute;
+  opacity: 0;
+  padding:0px;
+  margin:0px;
+  transition: transform 5s,opacity 1s;
+}
+
+/* ===== お店紹介のスタイル ===== */
+/* セクション */
+.shop {
+  background-color:#ffffee ;/* 背景の色 */
+  color: #663300;
+  padding: 10px;
+}
+
+/* h2見出し */
+.title {
+  font-size: 30px;
+  border-left-style: solid;
+  border-left-width: 10px;
+  padding-left: 15px;
+  margin-bottom: 10px;
+}
+.img2{
+  width:250px;
+  padding-top:5px;
+}
+
+/* 段落 */
+.shop p {
+  font-size: 20px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 30px;
+  height: 300px;
+}
+
+/* 画像 */
+.shop img {
+  float: right;/* 画像や箱の回り込み */
+}
+
+
+/* ===== パン紹介のスタイル ===== */
+/* セクション */
+.photo {
+  padding: 30px;
+  background-color:#bdb76b;
+  height:100%;
+}
+
+/* h2見出し */
+.photo h2 {
+  color: black;
+  border-color:#663300 ;
+}
+
+/* h3見出し */
+.photo h3 {
+  color: #663300;
+}
+
+/* 段落 */
+.photo p {
+  color: #663300;
+  clear: left;
+  text-align:right;
+  font-weight:800;
+  /* 画像や箱の回り込みをやめる */
+}
+.photo a{
+  text-decoration:none;
+  color: #663300;
+}
+.photo div {
+  background-color: white;
+  width: 240px;/* 横幅を指定する */
+  padding: 15px;
+  float: left;
+  margin: 10px;
+  box-shadow: 10px 10px 20px #000000;/* 影を指定する */
+}
+
+.gnav {
+   position:absolute;left:-95px;top:12px;
+  　display: inline-block;
+    height: 2px;
+   text-indent:-10em;
+    list-style-type: none;
+  
+}
+.gnav > li {/*親階層のみ幅を25%にする*/
+     width: 25%; 
+}
+/*全てのリスト・リンク共通*/
+.gnav li {
+  position: relative;
+    paddding-left:0px;
+     list-style-type: none;
+}
+.gnav li a {
+    padding-left:0px;
+    color: black;
+    display: block;
+    height: 2rem;
+    text-align: center;
+    text-decoration: none;
+    width: 150px;
+}
+.gnav li li {
+    height: 0;
+    overflow: hidden;
+    transition: .3s;
+}
+.gnav ul{
+  padding-left:0;
+}
+.gnav li:hover > ul > li {
+    height: 2rem;
+    overflow: visible;
+}

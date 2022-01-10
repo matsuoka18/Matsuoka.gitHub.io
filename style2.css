@@ -1,0 +1,94 @@
+body {
+    font-family:monospace;
+}
+.div2{
+    padding-top:20px;
+    width:100vw;
+    display:flex;
+    border-bottom:1px solid;
+}
+.ex{
+    float:left;
+}
+.top{
+    position:absolute;left:75%;top:10%;
+}
+.top div{
+    color:black;
+    display:inline-block;
+    padding-left:5px;
+}
+.top a{
+    text-decoration:none;
+    color:black;
+}
+.top div:hover{
+    font-weight:600;
+}
+
+.h1{
+ padding-left:100px;
+}
+.buy{
+ display:flex;
+}
+.buy1{
+    text-align:center;
+    height:30px;
+    width:100px;
+    position:absolute;left:180px;
+    margin-top:10px;
+    color:white;
+    font-size:20px;
+    font-weight:600;
+    border:1px solid white;
+    background-color:#FFCC66;
+}
+.buy1:hover{
+    color:black;
+    border-color:black;
+}
+.div1{
+    padding:5px;
+    background-color:#FFCC66;
+}
+.div3{
+    padding:5px;
+    background-color:#E0FFFF;
+}
+.div4{
+    padding:5px;
+    background-color:#F0FFF0;
+}
+.div5{
+    padding:5px;
+    background-color:#FFCC66;
+}
+.div6{
+    padding:5px;
+    background-color:#E0FFFF;
+}
+.div7{
+    padding:5px;
+    background-color:#F0FFF0;
+}.div8{
+    padding:5px;
+    background-color:#FFCC66;
+}
+.div9{
+    padding:5px;
+    background-color:#E0FFFF;
+}
+.div10{
+    padding:5px;
+    background-color:#F0FFF0;
+}
+.p1{
+    margin:10px;
+    padding-left:5px;
+    font-size:25px;
+    border-left:10px solid;
+}
+.all{
+    width:100vw;
+}

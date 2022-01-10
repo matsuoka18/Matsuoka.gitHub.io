@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <title>クイズ</title>
+    </head>
+    <body　onload="onl()">
+        <h1 id="h1">
+            健康クイズ
+        </h1>
+        <img onclick="ma()"src="img/matsu.jpeg">
+        <div id="div1"class="div1" onclick="start()">スタート</div>
+        <p class="p1"id="p1"></p>
+        <p class="p2"id="p2"></p>
+        <h2 id="rank"></h2>
+        <div class="an11" id="an1" onclick="ans1()"><span class="sp1" id="sp1"></span></div>
+        <div class="an22" id="an2" onclick="ans2()"><span class="sp2" id="sp2"></span></div>
+        <div class="an33" id="an3" onclick="ans3()"><span class="sp3" id="sp3"></span></div>
+        <audio id="audio1">
+            <source src="q1.mp3" type="audio/mp3">
+        </audio>
+        <audio id="audio2">
+            <source src="q2.mp3" type="audio/mp3">
+        </audio>
+        <audio id="audio3">
+            <source src="q3.mp3" type="audio/mp3">
+        </audio>
+    <script>
+    let text1 = document.getElementById('p1');
+    let text2 = document.getElementById('p2');
+    let sp1 = document.getElementById('sp1');
+    let sp2 = document.getElementById('sp2');
+    let sp3 = document.getElementById('sp3');
+    let rank = document.getElementById('rank');
+    time = "0";
+    point1 = "0"
+    let ppo = "0";
+    rank1 = "0";
+    rank2 = "0";
+    click ="0";
+        function hiddenn(){
+            document.querySelector('.div1').style.backgroundColor = "pink";
+            document.getElementById('div1').innerHTML ="やめる";
+            document.queryselector('.div1').style.border = "solid";
+        }
+        
+    　　function onl(){
+    　　  document.getElementById('audio1').load();
+    　　  document.getElementById('audio2').load();
+    　　  document.getElementById('audio3').load();
+    　　}
+    　　
+    　　function start(){
+    　　    click++;
+    　　    if(click === 1){
+    　　        startp();
+    　　    }
+    　　  else if(click === 2){
+    　　        location.href="index2.html";
+    　　    }
+    　　}
+    　　
+        function startp(){
+            document.getElementById('audio3').play();
+            text1.innerHTML = "第一問・記憶力を高める食べ物はどれでしょう"
+            setTimeout(start2,2000);
+            ppo++;
+            hiddenn();
+        }
+        function start12(){
+            document.getElementById('audio3').load();
+            document.getElementById('audio3').play();
+            text1.innerHTML ="第二問・免疫力を上げる方法は次のうちどれでしょうか"
+            setTimeout(start2,2000)
+            ppo++;
+        }
+        function start13(){
+             document.getElementById('audio3').load();
+            document.getElementById('audio3').play();
+            text1.innerHTML ="第三問・もっとも長生きできる睡眠時間はどれでしょうか"
+            setTimeout(start2,2000)
+            ppo++;
+        }
+        function start14(){
+             document.getElementById('audio3').load();
+            document.getElementById('audio3').play();
+            text1.innerHTML = "第四問・認知症予防になる麺はどれでしょうか"
+            setTimeout(start2,2000);
+            ppo++;
+        }
+        function start15(){
+             document.getElementById('audio3').load();
+            document.getElementById('audio3').play();
+            text1.innerHTML ="第五問・寝ている間にかく汗の量はどれくらいでしょう（夏）"
+            setTimeout(start2,2000)
+            ppo++;
+        }
+        function start16(){
+             document.getElementById('audio3').load();
+            document.getElementById('audio3').play();
+            text1.innerHTML ="第六問・人間の血管の長さは、全身合わせてどれくらいでしょう"
+            setTimeout(start2,2000)
+            ppo++;
+        }
+        function start17(){
+            rank2++;
+            if(rank2 === 1){
+            rank.innerHTML = "問題は簡単だったかな？"
+            setTimeout(start17,2000)
+            }
+            else if(rank2 === 2){
+                rank.innerHTML = "それでは結果発表します。"
+                setTimeout(start17,2000)
+            }
+             else if(rank2 === 3){
+                rank.innerHTML = "結果は" + "6問中" + rank1 + "点です"
+            }
+        }
+        function start2(){
+            time="10"
+            start3();
+            if(ppo === 1){
+                question();
+            }
+            else if(ppo === 2){
+                question2();
+            }
+            else if(ppo === 3){
+                question3();
+            }
+            else if(ppo === 4){
+                question4();
+            }
+            else if(ppo === 5){
+                question5();
+            }
+            else if(ppo === 6){
+                question6();
+            }
+        }
+        function start3(){
+            text2.innerHTML = "残り" + time + "秒";
+            if(time <1){
+                
+                clearInterval(count)
+                nodeco();
+                document.getElementById('audio2').load();
+                document.getElementById('audio2').play();
+                setTimeout(start17,1500)
+            }else{
+            time--;
+            start4();
+            }
+        }
+        function start4(){
+            count = setTimeout(start3,1000)
+        }
+        
+        function question(){
+            sp1.innerHTML = "シソ"
+            sp2.innerHTML = "ヨーグルト"
+            sp3.innerHTML = "クルミ"
+            deco();
+        }
+        function question2(){
+            sp1.innerHTML = "大爆笑する"
+            sp2.innerHTML = "サプリメントを摂る"
+            sp3.innerHTML = "お菓子を食べる"
+            deco();
+        }
+        function question3(){
+            sp1.innerHTML = "8時間"
+            sp2.innerHTML = "9時間"
+            sp3.innerHTML = "7時間"
+            deco();
+        }
+        function question4(){
+            sp1.innerHTML = "そうめん"
+            sp3.innerHTML = "うどん"
+            deco();
+        }
+        function question5(){
+            sp1.innerHTML = "500mlペットボトル"
+            sp2.innerHTML = "缶コーヒ"
+            sp3.innerHTML = "1Lペットボトル"
+            deco();
+        }
+        function question6(){
+            sp1.innerHTML = "地球2周半"
+            sp2.innerHTML = "地球1周"
+            sp3.innerHTML = "学校の校庭1週分"
+            deco();
+        }
+        
+        function check(){
+        if(point1 === "2"){
+            document.getElementById('audio2').play();
+            alert("残念")
+            setTimeout(start12,2000)
+        }
+        else if(point1 === "1"){
+            document.getElementById('audio2').play();
+         alert("残念")   
+         setTimeout(start12,2000)
+        }
+        else if(point1 === "3"){
+            document.getElementById('audio1').play();
+            alert("正解")
+            rank1++;
+            setTimeout(start12,2000)
+        }
+        }
+        
+        function check2(){
+            if(point1 === "1"){
+                document.getElementById('audio1').play();
+            alert("正解")
+            rank1++;
+            setTimeout(start13,2000)
+        }
+        else if(point1 === "2"){
+            document.getElementById('audio2').play();
+         alert("残念")   
+         setTimeout(start13,2000)
+        }
+        else if(point1 === "3"){
+            document.getElementById('audio2').play();
+            alert("残念")
+            setTimeout(start13,2000)
+        }
+        }
+        
+         function check3(){
+        if(point1 === "2"){
+            document.getElementById('audio2').play();
+            alert("残念")
+            setTimeout(start14,2000)
+        }
+        else if(point1 === "1"){
+            document.getElementById('audio2').play();
+         alert("残念")   
+         setTimeout(start14,2000)
+        }
+        else if(point1 === "3"){
+            document.getElementById('audio1').play();
+            alert("正解")
+            rank1++;
+            setTimeout(start14,2000)
+        }
+        }
+        
+        function check4(){
+            if(point1 === "1"){
+                document.getElementById('audio2').play();
+            alert("残念")
+            
+            setTimeout(start15,2000)
+        }
+        else if(point1 === "2"){
+            document.getElementById('audio1').play();
+         alert("正解")   
+         rank1++;
+         setTimeout(start15,2000)
+        }
+        else if(point1 === "3"){
+            document.getElementById('audio2').play();
+            alert("残念")
+            setTimeout(start15,2000)
+        }
+        }
+        
+        function check5(){
+            if(point1 === "1"){
+                document.getElementById('audio1').play();
+            alert("正解")
+            rank1++;
+            setTimeout(start16,2000)
+        }
+        else if(point1 === "2"){
+            document.getElementById('audio2').play();
+         alert("残念")   
+         setTimeout(start16,2000)
+        }
+        else if(point1 === "3"){
+            document.getElementById('audio2').play();
+            alert("残念")
+            setTimeout(start16,2000)
+        }
+        }
+        
+        function check6(){
+            if(point1 === "1"){
+                document.getElementById('audio1').play();
+            alert("正解")
+            rank1++;
+            setTimeout(start17,2000)
+        }
+        else if(point1 === "3"){
+            document.getElementById('audio2').play();
+         alert("残念")   
+         setTimeout(start17,2000)
+        }
+        else if(point1 === "2"){
+            document.getElementById('audio2').play();
+            alert("残念")
+            setTimeout(start17,2000)
+        }
+        }
+        
+        function deco(){
+          document.querySelector('.an11').style.backgroundColor = "pink"
+          document.querySelector('.an22').style.backgroundColor = "pink"
+          document.querySelector('.an33').style.backgroundColor = "pink"
+        }
+        
+        function nodeco(){
+          document.querySelector('.an11').style.backgroundColor = ""
+          document.querySelector('.an22').style.backgroundColor = ""
+          document.querySelector('.an33').style.backgroundColor = ""
+          sp1.innerHTML = ""
+          sp2.innerHTML = ""
+          sp3.innerHTML = ""
+          text1.innerHTML = ""
+          text2.innerHTML = ""
+        }
+        
+        function ans1(){
+            nodeco();
+            clearInterval(count)
+            point1 = "1"
+            if(ppo === 1){
+                check();
+            }
+            else if(ppo === 2){
+                check2();
+            }
+            else if(ppo === 3){
+                check3();
+            }
+            else if(ppo === 4){
+                check4();
+            }
+            else if(ppo === 5){
+                check5();
+            }
+            else if(ppo === 6){
+                check6();
+            }
+        }
+        function ans2(){
+            nodeco();
+            clearInterval(count)
+            point1 = "2"
+            if(ppo === 1){
+                check();
+            }
+            else if(ppo === 2){
+                check2();
+            }
+            else if(ppo === 3){
+                check3();
+            }
+            else if(ppo === 4){
+                check4();
+            }
+            else if(ppo === 5){
+                check5();
+            }
+            else if(ppo === 6){
+                check6();
+            }
+        }
+        function ans3(){
+            nodeco();
+            clearInterval(count)
+            point1 = "3"
+            if(ppo === 1){
+                check();
+            }
+            else if(ppo === 2){
+                check2();
+            }
+            else if(ppo === 3){
+                check3();
+            }
+            else if(ppo === 4){
+                check4();
+            }
+            else if(ppo === 5){
+                check5();
+            }
+            else if(ppo === 6){
+                check6();
+            }
+        }
+        function ma(){
+            location.href="index.html"
+        }
+    </script>
+    <style>
+        body{
+            font-family:monospace;
+            padding:0px;
+            margin:0px;
+        }
+        body h1{
+            font-family:monospace;
+            text-align:center;
+            background-color:pink;
+            padding-top:20px;
+            margin:0px;
+            height:50px;
+        }
+        body div{
+            display:center;
+            text-align:center;
+            width:200px;
+            height:200px;
+            float:left;
+            padding:50px;
+            margin:30px;
+        }
+        body span{
+            font-size:50px;
+        }
+        body img{
+            width:200px;
+            padding:0px;
+            margin:0px;
+            position:absolute;top:17px;left:5px;
+        }
+        .div1{
+            position:absolute;top:18px;left:80%;
+            width:120px;
+            height:40px;
+            padding:0px;
+            margin:0px;
+            background-color:white;
+            border-radius:30px;
+            font-size:25px;
+        }
+        .p1{
+            font-size:50px;
+        }
+        .p2{
+            font-size:30px;
+            
+        }
+    </style>
+    </body>
+</html>
