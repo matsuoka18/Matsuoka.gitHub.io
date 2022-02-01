@@ -13,7 +13,7 @@
         <div id="div1"class="div1" onclick="start()">スタート</div>
         <p class="p1"id="p1"></p>
         <p class="p2"id="p2"></p>
-        <h2 id="rank"></h2>
+        <p class="rank" id="rank"></p>
         <div class="an11" id="an1" onclick="ans1()"><span class="sp1" id="sp1"></span></div>
         <div class="an22" id="an2" onclick="ans2()"><span class="sp2" id="sp2"></span></div>
         <div class="an33" id="an3" onclick="ans3()"><span class="sp3" id="sp3"></span></div>
@@ -177,6 +177,7 @@
         }
         function question4(){
             sp1.innerHTML = "そうめん"
+            sp2.innerHTML = "そば"
             sp3.innerHTML = "うどん"
             deco();
         }
@@ -395,7 +396,7 @@
             }
         }
         function ma(){
-            location.href="gika.html"
+            location.href="index.html"
         }
     </script>
     <style>
@@ -446,6 +447,10 @@
         .p2{
             font-size:30px;
             
+        }
+        .rank{
+            font-size:100px;
+            text-align:center;
         }
     </style>
     </body>

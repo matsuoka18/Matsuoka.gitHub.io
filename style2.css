@@ -92,3 +92,6 @@ body {
 .all{
     width:100vw;
 }
+.pp1{
+    position:absolute;left:50%;
+}

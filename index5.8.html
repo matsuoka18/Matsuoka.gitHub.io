@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>
+            申し込みページ
+        </title>
+    </head>
+    <body>
+        <a href="index.html"><img class="img2" src="img/matsu.jpeg" width="240px"></a>
+        <h1>申し込みページ</h1>
+        <div class="top">
+        <div><a href="index.html">トップページ</a></div>
+        <div><a href="index3.html">商品一覧</div>
+        <div><a href="index6.2.html">サイトマップ</div>
+        <div><a href="index6.1.html">当社について</div>
+        <div><a href="index6.3.html">お問い合わせ</a></div>
+        </div>
+        <p class="p1">シニア医療保険</p>
+        <div >
+    <label class="div">名前<input class="text" type="text" id="text1"value=""></label>
+　　<label class="div">カナ<input class="text" type="text" id="text2"value=""></label>
+    <label class="div">住所<input class="text" type="text" id="text3"value=""></label>
+　　<label class="div">郵便番号<input class="text" type="text" id="text4"value=""></label>
+    <label class="div">電話番号<input class="text" type="text" id="text5"value=""></label>
+　　<label class="div">メールアドレス<input class="text" type="text" id="text6"value=""></label>
+    <label class="div">緊急連絡先<input class="text" type="text" id="text7"value=""></label>
+　　<label class="div">その他<input class="text" type="text" id="text8"value=""></label>
+    </div>
+    <div class="ou1">
+    <p class="out1" id="kaku"></p>    
+    <p class="out" id="out1"></p>
+    <p class="out" id="out2"></p>
+    <p class="out" id="out3"></p>
+    <p class="out" id="out4"></p>
+    <p class="out" id="out5"></p>
+    <p class="out" id="out6"></p>
+    <p class="out" id="out7"></p>
+    <p class="out" id="out8"></p>
+    <div class="kete" id="load" onclick="next()"></div>
+    </div>
+    <input class="button" type="button" onclick="check()" value="確認する">    
+        <script>
+        let kaku = document.getElementById('kaku');
+        let out1 = document.getElementById('out1');
+        let out2 = document.getElementById('out2');
+        let out3 = document.getElementById('out3');
+        let out4 = document.getElementById('out4');
+        let out5 = document.getElementById('out5');
+        let out6 = document.getElementById('out6');
+        let out7 = document.getElementById('out7');
+        let out8 = document.getElementById('out8');
+        let load = document.getElementById('load');
+        function check(){
+        let text1 = document.getElementById('text1');
+        let text2 = document.getElementById('text2');
+        let text3 = document.getElementById('text3');
+        let text4 = document.getElementById('text4');
+        let text5 = document.getElementById('text5');
+        let text6 = document.getElementById('text6');
+        let text7 = document.getElementById('text7');
+        let text8 = document.getElementById('text8');
+            out1.innerHTML = "名前："　+ text1.value;
+            out2.innerHTML = "名前：" +text2.value;
+            out3.innerHTML = "住所：" +text3.value;
+            out4.innerHTML = "郵便番号：" +text4.value;
+            out5.innerHTML = "電話番号：" +text5.value;
+            out6.innerHTML = "メールアドレス：" +text6.value;
+            out7.innerHTML = "緊急連絡先：" +text7.value;
+            out8.innerHTML = "その他：" +text8.value;
+            kaku.innerHTML = "確認";
+            load.innerHTML = "申し込みする";
+            document.querySelector('.kete').style.border = "1px solid"
+            }
+            function next(){
+                location.href="index7.html"
+            }
+        </script>
+        <style>
+            body{
+                font-family:monospace;
+            }
+            body h1{
+                border-bottom:1px solid;
+            }
+            .div{
+                display:block;
+                width:250px;
+                font-size:30px;
+                padding-bottom:30px;
+            }
+            .text{
+                width:300px;
+                height:30px;
+                border:2px solid;
+                font-size:20px;
+            }
+            .button{
+                height:50px;
+                width:100px;
+                font-size:15px;
+            }
+            .out{
+                font-size:20px;
+                display:block;
+                padding-bottom:55px;
+            }
+            .ou1{
+                position:absolute;left:40%;top:25%;
+                font-size:20px;
+                font-weight:700;
+            }
+            .out1{
+                font-size:20px;
+                display:block;
+                padding-bottom:5px;
+            }
+            .kete{
+                text-align:center;
+            }
+            .kete:hover{
+                background-color:black;
+                color:white;
+            }
+            .p1{
+                font-size:20px;
+                font-weight:600;
+            }
+                              .top{
+    position:absolute;left:75%;top:10%;
+}
+.top div{
+    color:black;
+    display:inline-block;
+    padding-left:5px;
+}
+.top a{
+    text-decoration:none;
+    color:black;
+}
+.top div:hover{
+    font-weight:600;
+}
+        </style>
+    </body>
+    </hrml>

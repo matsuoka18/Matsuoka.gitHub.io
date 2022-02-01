@@ -23,7 +23,7 @@ body {
 /* ヘッダーの箱 */
 
 header {
-  background-image: url(pic3.jpg);/* 背景画像 */
+  background-image: url(img/pic3.jpg);/* 背景画像 */
   height: 450px;/* 高さ */
   padding-top: 150px;
   background-size:cover;
@@ -84,7 +84,13 @@ header {
   color: #663300;
   padding: 10px;
 }
-
+.title{
+  font-size: 30px;
+  border-left-style: solid;
+  border-left-width: 10px;
+  padding-left: 15px;
+  margin-bottom: 10px;
+}
 /* h2見出し */
 .title {
   font-size: 30px;
@@ -92,7 +98,9 @@ header {
   border-left-width: 10px;
   padding-left: 15px;
   margin-bottom: 10px;
+  
 }
+
 .img2{
   width:250px;
   padding-top:5px;
@@ -155,11 +163,9 @@ header {
 
 .gnav {
    position:absolute;left:-95px;top:12px;
-  　display: inline-block;
     height: 2px;
    text-indent:-10em;
     list-style-type: none;
-  
 }
 .gnav > li {/*親階層のみ幅を25%にする*/
      width: 25%; 
@@ -169,15 +175,15 @@ header {
   position: relative;
     paddding-left:0px;
      list-style-type: none;
+  
 }
 .gnav li a {
-    padding-left:0px;
     color: black;
     display: block;
     height: 2rem;
-    text-align: center;
+    text-align: right;
     text-decoration: none;
-    width: 150px;
+    width: 50px;
 }
 .gnav li li {
     height: 0;

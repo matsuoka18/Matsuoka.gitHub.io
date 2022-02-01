@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>お問い合わせ</title>
+    </head>
+    <body onload="load()">
+          <a href="index.html"><img class="img2" src="img/matsu.jpeg" width="240px"></a>
+        <h1>お問い合わせページ</h1>
+        <div class="top">
+        <div><a href="index.html">トップページ</a></div>
+        <div>サイトマップ</div>
+        <div>当社について</div>
+        </div>
+        <div class="div"onclick="div()"></div>
+        <audio id="audio">
+            <source src="Azuma.mp3" type="audio/mp3">
+        </audio>
+        <script>
+            function load(){
+                document.getElementById('audio').load();
+                document.getElementById('audio').play();
+                setTimeout(div1,5000);
+            }
+            function div(){
+                alert("hello")
+                document.getElementById('audio').load();
+                document.getElementById('audio').play();
+            }
+            function div1(){
+                document.getElementById('audio').load();
+                document.getElementById('audio').play();
+                div();
+            }
+        </script>
+        <style>
+            .div{
+                width:200px;
+                height:200px;
+            }
+            body{
+                font-family:monospace;
+            }
+            body h1{
+                border-bottom:1px solid;
+            }
+            .top{
+    position:absolute;left:75%;top:10%;
+}
+.top div{
+    color:black;
+    display:inline-block;
+    padding-left:5px;
+}
+.top a{
+    text-decoration:none;
+    color:black;
+}
+.top div:hover{
+    font-weight:600;
+}
+        </style>
+    </body>
+</html>
