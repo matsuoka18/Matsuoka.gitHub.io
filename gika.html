@@ -11,7 +11,7 @@
 </head>
 
 <header id="head">
-  <img class="img1" src="matsu.jpeg">
+  <img class="img1" src="img/matsu.jpeg">
   
   <div class="div1">
   <ul class="gnav">
@@ -22,15 +22,15 @@
   </ul>
     </li>
   </ul>
-  <p class="p1">サイトマップ</p>
-  <p class="p1">当社について</p>
-  <p class="p1">お問い合わせ</p>
+  <p onclick="otoo()"class="p1">サイトマップ</p>
+  <p onclick="oo()"class="p1">当社について</p>
+  <p onclick="oto()"class="p1">お問い合わせ</p>
   
   </div>
 </header>
-<body onload="music()">
+<body>
 <section class="shop">
-  <img class="img2" src="matsu.jpeg">
+  <img class="img2" src="img/matsu.jpeg">
   <h2 class="title">明治松尾生命について</h2>
 
 <pre><p>    
@@ -47,37 +47,35 @@
 
 <section class="photo">
   <h2 class="title">おすすめの商品</h2>
-  <div>
-    <img src="fam.jpg" width="240">
+  <div onclick="html()">
+    <img src="img/fam.jpg" width="240">
     <h3>お手軽セット</h3>
   </div>
   
-  <div>
-    <img onclick="stop()"src="doc.png" width="240">
+  <div onclick="html()">
+    <img src="img/doc.png" width="240">
     <h3>スタンダートセット</h3>
   </div>
   
-  <div>
-    <img onclick="music1()" src="pic1.jpg" height="155"width="240">
+  <div onclick="html()">
+    <img src="img/pic1.jpg" height="155"width="240">
     <h3>プレミアムセット</h3>
   </div>
   <p><a href="index3.html">もっと詳しく→</a></p>
 </section>
-<audio id="audio">
-  <source src="Azuma.mp3" type="audio/mp3">
-</audio>
 <script>
- function music(){
-   document.getElementById('audio').load();
- }
- function music1(){
-   document.getElementById('audio').play();
-   document.querySelector('.header').style.backgroundImage = "url(img/azuma.jpeg)";
-   
- }
- function stop(){
-   document.getElementById('audio').pause();
- }
+  function oto(){
+    location.href="index6.html"
+  }
+  function oo(){
+    location.href="index6.1.html"
+  }
+  function otoo(){
+    location.href="index6.2.html"
+  }
+  function html(){
+    location.href= "index3.html"
+  }
 </script>
 </body>
 </html>
