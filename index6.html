@@ -4,35 +4,17 @@
         <meta charset="utf-8">
         <title>お問い合わせ</title>
     </head>
-    <body onload="load()">
-          <a href="index.html"><img class="img2" src="matsu.jpeg" width="240px"></a>
+    <body>
+          <a href="index.html"><img class="img2" src="img/matsu.jpeg" width="240px"></a>
         <h1>お問い合わせページ</h1>
         <div class="top">
         <div><a href="index.html">トップページ</a></div>
-        <div>サイトマップ</div>
-        <div>当社について</div>
+        <div><a href="index6.2.html">サイトマップ</a></div>
+        <div><a href="index6.1.html">当社について</a></div>
         </div>
-        <div class="div"onclick="div()"></div>
-        <audio id="audio">
-            <source src="Azuma.mp3" type="audio/mp3">
-        </audio>
-        <script>
-            function load(){
-                document.getElementById('audio').load();
-                document.getElementById('audio').play();
-                setTimeout(div1,5000);
-            }
-            function div(){
-                alert("hello")
-                document.getElementById('audio').load();
-                document.getElementById('audio').play();
-            }
-            function div1(){
-                document.getElementById('audio').load();
-                document.getElementById('audio').play();
-                div();
-            }
-        </script>
+        <p>お問合せしたい内容をしたの欄に入力してください</p>
+        <textarea class="text" cols="40" rows="20" wrap="hrad"></textarea>
+        <div onclick="next()"class="button">送信する</div>
         <style>
             .div{
                 width:200px;
@@ -59,6 +41,30 @@
 .top div:hover{
     font-weight:600;
 }
+.text{
+    font-size:15px;
+}
+.button{
+    font-size:15px;
+    text-align:center;
+    padding-top:6px;
+    padding-bottom:0px;
+    margin-bottom:0px;
+    width:100px;
+    height:30px;
+    border:1px solid;
+    color:black;
+}
+.button:hover{
+    color:white;
+   background-color:black;
+}
+
         </style>
+        <script>
+            function next(){
+                location.href="index4.1.html"
+            }
+        </script>
     </body>
 </html>

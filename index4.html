@@ -8,6 +8,79 @@
         <link rel="stylesheet" href="style2.css">
     </head>
     <body>
-        <h3>カスタマイズする</h3>
-        <h4>終わってません！！！！</h4>
+        <div class="div2">
+          <img src="img/matsu.jpeg" width="250px"height="50px">
+        <h1 class="h1">カスタマイズページ</h1>
+        <div class="top">
+        <div><a href="index.html">トップページ</a></div>
+        <div><a href="index3.html">商品一覧</a></div>
+        <div><a href="index6.1.html">当社について</a></div>
+        <div><a href="index6.html">お問い合わせ</a></div>
+        </div>
+        </div>
+        <p class="mida">カスタマイズしたいことを下↓の欄に書き込み送信してください</p>
+      <textarea class="mai" id="tex"name="matu" cols="40" rows="10" wrap="hard"value=""></textarea>
+      <div class="check"onclick="check()">確認する</div>
+      <p class="checktext"id="p1"></p>
+      <div class="checkbuttom" id="checkbutton"onclick="end()"></div>
+      <div class="div1">
+      <pre>
+      <p>・例：怪我をすることが多いのでそれに見合ったプラン
+    元々腰が弱くてもしもの時に備えられるプランなど
+     </p>
+      </pre>
+      </div>
+    <style>
+        .top{
+            position:absolute;left:70%;
+        }
+        .mai{
+            font-size:20px;
+        }
+        .mida{
+            font-size:25px;
+            font-weight:800;
+        }
+        .check{
+            padding-top:2px;
+            border:1px solid;
+            width:120px;
+            height:30px;
+            text-align:center;
+        }
+        .check:hover{
+            background-color:black;
+            color:white;
+        }
+        .checktext{
+            font-size:20px;
+            position:absolute;left:55%;top:25%;
+        }
+        .checkbuttom{
+            font-size:15px;
+            position:absolute;left:55%;top:62%;
+            width:120px;
+            height:30px;
+            text-align:center;
+            padding-top:2px;
+        }
+        .checkbuttom:hover{
+            background-color:black;
+            color:white;
+        }
+    </style>
+    <script>
+        let text = document.getElementById('tex');
+        let p1 = document.getElementById('p1');
+        let checkbutton = document.getElementById('checkbutton');
+        function check(){
+            p1.innerHTML = text.value;
+            checkbutton.innerHTML = "送信"
+            document.querySelector('.checkbuttom').style.border = "1px solid"
+        }
+        function end(){
+            location.href="index4.1.html"
+        }
+    </script>
     </body>
+    </html>

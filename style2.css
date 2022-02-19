@@ -93,5 +93,42 @@ body {
     width:100vw;
 }
 .pp1{
-    position:absolute;left:50%;
+    position:absolute;left:35%;top:30%;
+    font-size:20px;
+}
+.pp2{
+    position:absolute;left:35%;top:60%;
+    font-size:20px;
+}
+.pp3{
+    position:absolute;left:35%;top:90%;
+    font-size:20px;
+}
+.pp4{
+    position:absolute;left:20%;top:130%;
+    font-size:20px;
+}
+.pp5{
+    position:absolute;left:20%;top:160%;
+    font-size:20px;
+}
+.pp6{
+    position:absolute;left:20%;top:190%;
+    font-size:20px;
+}
+.pp7{
+    position:absolute;left:35%;top:230%;
+    font-size:20px;
+}
+.pp8{
+    position:absolute;left:25%;top:260%;
+    font-size:20px;
+}
+.pp9{
+    position:absolute;left:20%;top:260%;
+    font-size:20px;
+}
+.pp10{
+    position:absolute;left:20%;top:290%;
+    font-size:20px;
 }

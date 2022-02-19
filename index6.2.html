@@ -5,20 +5,31 @@
         <title>サイトマップ</title>
     </head>
     <body>
-          <a href="index.html"><img class="img2" src="matsu.jpeg" width="240px"></a>
+          <a href="index.html"><img class="img2" src="img/matsu.jpeg" width="240px"></a>
         <h1>サイトマップ</h1>
         <div class="top">
         <div><a href="index.html">トップページ</a></div>
-        <div>当社について</div>
-        <div>お問い合わせ</div>
+        <div><a href="index6.1.html">当社について</a></div>
+        <div><a href="index6.html">お問い合わせ</a></div>
         </div>
-        <a class="color"href="index.html"><p class="big">・トップページ</p></a>
-        <a class="color"href="index.html"><p class="big1">・サービス一覧</p>
+        <section>
+        <div class="border"></div>
+        <a class="color"href="index.html"><p class="big">トップページ</p></a>
+        </section>
+        <section>
+             <div class="border2"></div>
+        <a class="color"><p class="big">サービス一覧</p>
         <a class="color"href="index3.html"><p class="small">・商品一覧</p>
         <a class="color"href="index2.html"><p class="small">・健康クイズ</p>
-        <a class="color"href="index6.1.html"><p class="big2">・当社について</p>
-        <a class="color"href="index6.html"><p class="big">・お問い合わせ</p>
-        <p>時間なくてデザインできませんでした🙇</p>
+        </section>
+        <section>
+             <div class="border3"></div>
+        <a href="index6.1.html" class="color"><p class="big">当社について</p>
+        </section>
+        <section>
+             <div class="border4"></div>
+        <a href="index6.html" class="color"><p class="big">お問い合わせ</p>
+        </section>
         <style>
             body{
                 font-family:monospace;
@@ -28,6 +39,31 @@
             }
             .top{
     position:absolute;left:75%;top:10%;
+}
+.border{
+    position:absolute;top:23.5%;left:19%;
+    width:42px;
+    border:1px solid;
+    transform: rotate(100deg);
+}
+
+.border2{
+    position:absolute;top:34%;left:19%;
+    width:42px;
+    border:1px solid;
+    transform: rotate(100deg);
+}
+.border3{
+    position:absolute;top:62.5%;left:19%;
+    width:42px;
+    border:1px solid;
+    transform: rotate(100deg);
+}
+.border4{
+    position:absolute;top:73%;left:19%;
+    width:42px;
+    border:1px solid;
+    transform: rotate(100deg);
 }
 .top div{
     color:black;
@@ -42,27 +78,27 @@
     font-weight:600;
 }
 .big{
-    font-size:20px;
-    padding-bottom:40px;
+    width:195px;
+    font-size:30px;
+    padding-bottom:0px;
     padding-left:20px;
+  border-left-style: solid;
+  border-left-width: 10px;
+  border-bottom:1px solid;
 }
-.big1{
-    font-size:20px;
-    padding-left:20px;
-}
-.big2{
-    font-size:20px;
-    padding-top:40px;
-    padding-bottom:40px;
-    padding-left:20px;
+.big:hover{
+    background-color:whitesmoke;
 }
 .small{
-    font-size:17px;
+    font-size:25px;
     padding-left:20px;
 }
 .color{
     color:black;
     text-decoration:none;
+}
+.small:hover{
+    background-color:whitesmoke;
 }
         </style>
     </body>
