@@ -23,7 +23,7 @@ body {
 /* ヘッダーの箱 */
 
 header {
-  background-image: url(img/pic3.jpg);/* 背景画像 */
+  background-image: url(pic3.jpg);/* 背景画像 */
   height: 450px;/* 高さ */
   padding-top: 150px;
   background-size:cover;
