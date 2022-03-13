@@ -7,7 +7,7 @@
         </title>
     </head>
     <body>
-        <a href="index.html"><img class="img2" src="matsu.jpeg" width="240px"></a>
+        <a href="index.html"><img class="img2" src="img/matu6.jpeg" width="240px"></a>
         <h1>申し込みページ</h1>
         <div class="top">
         <div><a href="index.html">トップページ</a></div>
@@ -28,7 +28,7 @@
 　　<label class="div">その他<input class="text" type="text" id="text8"value=""></label>
     </div>
     <div class="ou1">
-    <p class="out1" id="kaku"></p>    
+    <p class="out1" id="kaku"></p>
     <p class="out" id="out1"></p>
     <p class="out" id="out2"></p>
     <p class="out" id="out3"></p>
@@ -39,7 +39,7 @@
     <p class="out" id="out8"></p>
     <div class="kete" id="load" onclick="next()"></div>
     </div>
-    <input class="button" type="button" onclick="check()" value="確認する">    
+    <input class="button" type="button" onclick="check()" value="確認する">
         <script>
         let kaku = document.getElementById('kaku');
         let out1 = document.getElementById('out1');
@@ -51,6 +51,8 @@
         let out7 = document.getElementById('out7');
         let out8 = document.getElementById('out8');
         let load = document.getElementById('load');
+        let text1 = document.getElementById('text1');
+          text1.addEventListener('keypress',key_pre);
         function check(){
         let text1 = document.getElementById('text1');
         let text2 = document.getElementById('text2');
@@ -71,6 +73,16 @@
             kaku.innerHTML = "確認";
             load.innerHTML = "申し込みする";
             document.querySelector('.kete').style.border = "1px solid"
+            }
+            function key_pre(ke){
+              if(ke.keyCode === 13){
+                che();
+              }
+            }
+            function che(){
+              if(text1.value === "あ"){
+                location.href="こた.html"
+              }
             }
             function next(){
                 location.href="index7.html"

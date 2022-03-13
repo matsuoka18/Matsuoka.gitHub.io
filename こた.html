@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>こたくん集</title>
+  </head>
+  <body>
+    <div  onclick="co()"class="d1"id="d1">気づき編</div>
+    <div  onclick="hello()"class="d2"id="d2">道編</div>
+    <p id="p1"></p>
+    <video src="check.mp4" controls muted playinline loop poster="check.png"class="q1"id="qw"></video>
+    <video src="walk.mp4" controls muted playinline loop poster="walk.png"class="q2"id="qe"></video>
+    <script>
+      po = 0;
+      po1 = 0;
+      function co(){
+        po++;
+        if(po < 2){
+ document.querySelector('.q1').style.visibility = "visible";
+ document.querySelector('.d1').style.backgroundColor = "blue";
+ document.getElementById('d1').innerHTML = "選択中";
+}else{
+   document.querySelector('.q1').style.visibility = "hidden";
+ document.querySelector('.d1').style.backgroundColor = "darkblue";
+ document.getElementById('d1').innerHTML = "気づき編";
+ po = 0;
+}
+    }
+  function hello(){
+        po1++;
+        if(po1 < 2){
+ document.querySelector('.q2').style.visibility = "visible";
+ document.querySelector('.d2').style.backgroundColor = "blue";
+ document.getElementById('d2').innerHTML = "選択中";
+  document.getElementById('p1').innerHTML = "下の方にあるかも";
+}else{
+   document.querySelector('.q2').style.visibility = "hidden";
+ document.querySelector('.d2').style.backgroundColor = "darkblue";
+ document.getElementById('d2').innerHTML = "道編";
+ po1 = 0;
+}
+    }
+      </script>
+    <style>
+      body{
+        font-family:monospace;
+      }
+      .d1{
+        width:100px;
+        height:40px;
+        background-color:darkblue;
+        float:left;
+        padding-left:5px;
+        color:white;
+        font-family:monospace;
+        font-weight:700;
+      }
+        .d2{
+        width:100px;
+        height:40px;
+        background-color:darkblue;
+        float:left;
+        padding-left:5px;
+        color:white;
+        font-family:monospace;
+        font-weight:700;
+      }
+      .d1:hover{
+        background-color:blue;
+      }
+      .d2:hover{
+        background-color:blue;
+      }
+      .q1{
+        visibility:hidden;
+        width:40vw;
+      }
+      .q2{
+        visibility:hidden;
+        width:40vw;
+      }
+      </style>
+    </body>
+</html>
