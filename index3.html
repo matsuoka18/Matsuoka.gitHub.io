@@ -2,14 +2,18 @@
 <html>
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <script type="text/javascript"　src="index3.js">
+
+        </script>
         <title>
             商品一覧
         </title>
-        <link rel="stylesheet" href="style2.css">
+        <img src="img/matu6.jpeg"class="imgg">
     </head>
-    <body>
+    <body onload="start()">
         <div class="div2">
-          <img src="matsu.jpeg" width="250px"height="50px">
+
         <h1 class="h1">商品一覧</h1>
         <div class="top">
         <div><a href="index.html">トップページ</a></div>
@@ -20,133 +24,193 @@
         <div class="all">
         <p class="p1">人気のある商品</p>
   <div class="div1">
-         <img src="fam.jpg" width="240">
+         <img src="img/fam.jpg" class="width1">
     <div class="buy">
     <h3>お手軽セット</h3>
+    <div onclick="mo()"class="buy1">申し込み</div>
     <pre>
     <p class="pp1">保障は充実しているのに値段が安い、お得な商品です
-    
+
                    ¥670円（月額）</p>
     </pre>
-    <div onclick="mo()"class="buy1">申し込み</div>
-    </div>  
-    
+
+    </div>
+
   </div>
-  
+
   <div class="div3">
-    <img onclick="stop()"src="doc.png" width="240">
+    <img onclick="stop()"src="img/doc.png" class="width1">
     <div class="buy">
     <h3>スタンダートセット</h3>
+      <div onclick="mo1()"class="buy1">申し込み</div>
     <pre>
     <p class="pp2">保障内容は充実していて通院する際の負担がより軽減される商品です
-    
+
                     ¥970円
     </p>
     </pre>
-    <div onclick="mo1()"class="buy1">申し込み</div>
+
   </div>
   </div>
   <div class="div4">
-    <img onclick="music1()" src="pic1.jpg" height="155"width="240">
+    <img onclick="music1()" src="img/pic1.jpg" class="width1">
     <div class="buy">
     <h3>プレミアムセット</h3>
+    <div onclick="mo2()"class="buy1">申し込み</div>
     <pre>
     <p class="pp3">上２つに比べけが・病気に特化した商品、
     　　　　　　　　　　　　　　元々体があまり強くない方などにオススメ
-    
-    　　　　　　　　　　¥1000円
+
+    　　　　　　　　¥1000円
     </p>
     </pre>
-    <div onclick="mo2()"class="buy1">申し込み</div>
+
   </div>
   </div>
   <p class="p1">子供むけの商品</p>
   <div class="div5">
-        <img src="baby.jpg" width="240">
+        <img src="img/baby.jpg" class="width1">
     <div class="buy">
     <h3>初めての子育てセット</h3>
+        <div onclick="mo3()"class="buy1">申し込み</div>
     <pre>
     <p class="pp4">　　　初めての育児とういうことで、安い値段の割に高いサービスが得られます。
                                               また専門の先生からのアドバイスも！
-                   　　　　　　　　　 ¥800円
+                   　　　　　　　　　　　 ¥800円
     </p>
     </pre>
-    <div onclick="mo3()"class="buy1">申し込み</div>
+
   </div>
   </div>
   <div class="div6">
-    <img onclick="stop()"src="baby2.jpg" width="240">
+    <img onclick="stop()"src="img/baby2.jpg"class="width1">
     <div class="buy">
     <h3>育児寄り添いセット</h3>
+      <div onclick="mo4()"class="buy1">申し込み</div>
     <pre>
     <p class="pp5">    両親共働きの夫婦などにおすすめの商品で保育園幼稚園などで必要になるお金を全額負担！
-    
+
    　　　　　　　　　　　　　　　　　　　 ¥970円
     </p>
     </pre>
-    <div onclick="mo4()"class="buy1">申し込み</div>
+
   </div>
   </div>
   <div class="div7">
-    <img onclick="music1()" src="baby3.jpg" height="155"width="240">
+    <img onclick="music1()" src="img/baby3.jpg" class="width1">
     <div class="buy">
     <h3>育児費援助セット</h3>
+        <div onclick="mo5()"class="buy1">申し込み</div>
     <pre>
     <p class="pp6">　    経済的に子育ては...という方必見の商品で育児中は補助金がでて,
 　　　　　　　いずれ子供が大きくなってから料金の支払いを行うこともできます
 　　　　　　　　　　　　　　　　　　　　　¥700円
 </p>
 </pre>
-    <div onclick="mo5()"class="buy1">申し込み</div>
+
   </div>
   </div>
         <p class="p1">ご高齢の方向けの商品</p>
   <div class="div8">
-        <img src="Bba1.jpg" width="240">
+        <img src="img/Bba1.jpg"class="width1">
     <div class="buy">
     <h3>シニア保険セット</h3>
+      <div onclick="mo6()"class="buy1">申し込み</div>
     <pre>
     <p class="pp7">シニアの方に人気の商品で通院、介護など手厚くカバーされている商品です
-    
-    　　　　　　　　　　¥1000円
+
+    　　　　　　　　　　　　　　　　¥1000円
 </p>
 </pre>
-    <div onclick="mo6()"class="buy1">申し込み</div>
+
   </div>
   </div>
   <div class="div9">
-    <img onclick="stop()"src="Bba2.jpg" width="240">
+    <img onclick="stop()"src="img/Bba2.jpg" class="width1">
     <div class="buy">
     <h3>介護サービスセット</h3>
+    <div onclick="mo7()"class="buy1">申し込み</div>
     <pre>
     <p class="pp9"> 　　　 介護サービスに特化した商品で、施設料金など手厚く補助し、
-    　　　　　　　　　　　　　　　　　　　　　　　　　　また介護專門の医師をつけられます
+    　　　　　　　　　　　　また介護專門の医師をつけられます
 
 　　　　　　　　　　　　　　　　　　　　　　¥1100円
 </p>
 </pre>
-    <div onclick="mo7()"class="buy1">申し込み</div>
+
   </div>
   </div>
   <div class="div10">
-    <img onclick="music1()" src="Bba3.jpg" height="155"width="240">
+    <img onclick="music1()" src="img/Bba3.jpg" class="width1">
     <div class="buy">
     <h3>シニア医療保険</h3>
+    <div onclick="mo8()" class="buy1">申し込み</div>
     <pre>
-    <p class="pp10">    シニアの方に人気の商品で、
-    　　　　　　　　主に病院への通院や入院など持病をお持ちの方などにおすすめの商品です
+    <p class="pp10">       　シニアの方に人気の商品で、
+  　　主に病院への通院や入院など持病をお持ちの方などにおすすめの商品です
 
-　　　　　　　　　　　　　　　　　　　　　　¥1010円
+　　　　　　　　　　　　　　　¥1010円
 </p>
 </pre>
-    <div onclick="mo8()" class="buy1">申し込み</div>
+
     </div>
     </div>
         <p class="p1">カスタマイズする商品</p>
         <div><a href="index4.html">専用ページへいく</a></div>
         </div>
         </div>
-        <script>
+  <script>
+  var height = window.screen.height;
+  var width = window.screen.width;
+   function start(){
+//alert(height + "px")
+//alert(width+"px")
+if(height == 667 && width == 375){
+  var d = document;
+		var link = d.createElement('link');
+		link.href = 'style2.1.css';
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		var h = d.getElementsByTagName('head')[0];
+		h.appendChild(link);
+}
+else if(height == 812 && width == 375){
+  var d = document;
+		var link = d.createElement('link');
+		link.href = 'style2.2.css';
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		var h = d.getElementsByTagName('head')[0];
+		h.appendChild(link);
+}
+else if(height == 896 && width == 414){
+  var d = document;
+		var link = d.createElement('link');
+		link.href = 'style2.3.css';
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		var h = d.getElementsByTagName('head')[0];
+		h.appendChild(link);
+}
+else if(height == 844 && width == 390){
+  var d = document;
+		var link = d.createElement('link');
+		link.href = 'style2.4.css';
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		var h = d.getElementsByTagName('head')[0];
+		h.appendChild(link);
+}
+else if(height == 926 && width == 428){
+  var d = document;
+		var link = d.createElement('link');
+		link.href = 'style2.5.css';
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		var h = d.getElementsByTagName('head')[0];
+		h.appendChild(link);
+}
+}
           function mo(){
             location.href="index5.html"
           }
