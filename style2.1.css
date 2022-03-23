@@ -27,7 +27,7 @@ body {
     color:black;
     display:inline-block;
     padding-left:2px;
-    font-size: 5px;
+    font-size: 10px;
     font-weight:600;
 }
 .top a{
@@ -37,7 +37,6 @@ body {
 }
 .top div:hover{
     font-weight:600;
-}
 }
 .h1{
  padding-left:20px;
@@ -92,7 +91,8 @@ body {
   height:225px;
     padding:5px;
     background-color:#F0FFF0;
-}.div8{
+}
+.div8{
   height:225px;
     padding:5px;
     background-color:#FFCC66;
