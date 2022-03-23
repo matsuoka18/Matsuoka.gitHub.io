@@ -1,4 +1,7 @@
-/*iPhone 6s + 7 + 8 + SE 2nd+ */body {
+/*iPhone 6s + 7 + 8 + SE 2nd+ */
+body {
+    width:100%;
+    height:100%;
     font-family:monospace;
     padding-left:0;
 }
