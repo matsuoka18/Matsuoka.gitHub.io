@@ -24,20 +24,21 @@ body {
 
 header {
   background-image: url(img/pic3.jpg);/* 背景画像 */
-  height: 450px;/* 高さ */
+  height: 900px;/* 高さ */
   padding-top: 150px;
   background-size:cover;
    font-weight:600;
 }
 .img1{
-  width:250px;
+  width:450px;
   position:absolute;top:0px;
   margin-top:25px;
   margin-left:10px;
 }
 .div1{
-  position:absolute;top:0px;left:70%;
+  position:absolute;top:0px;left:80%;
   display:inline-block;
+  font-size:18px;
 }
 .p1{
   display:inline-block;
@@ -86,7 +87,7 @@ header {
 }
 .title{
   font-size: 30px;
-  border-left-style: solid;  
+  border-left-style: solid;
   border-left-width: 10px;
   padding-left: 15px;
   margin-bottom: 10px;
@@ -98,11 +99,11 @@ header {
   border-left-width: 10px;
   padding-left: 15px;
   margin-bottom: 10px;
-  
+
 }
 
 .img2{
-  width:250px;
+  width:450px;
   padding-top:5px;
 }
 
@@ -168,14 +169,14 @@ header {
     list-style-type: none;
 }
 .gnav > li {/*親階層のみ幅を25%にする*/
-     width: 25%; 
+     width: 25%;
 }
 /*全てのリスト・リンク共通*/
 .gnav li {
   position: relative;
     paddding-left:0px;
      list-style-type: none;
-  
+
 }
 .gnav li a {
     color: black;

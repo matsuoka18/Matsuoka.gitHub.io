@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-    
+
     <head>
         <meta charset="utf-8">
         <title>クイズ</title>
@@ -9,7 +9,7 @@
         <h1 id="h1">
             健康クイズ
         </h1>
-        <img onclick="ma()"src="matsu.jpeg">
+        <img onclick="ma()"src="img/matu6.jpeg">
         <div id="div1"class="div1" onclick="start()">スタート</div>
         <p class="p1"id="p1"></p>
         <p class="p2"id="p2"></p>
@@ -44,7 +44,7 @@
             document.getElementById('div1').innerHTML ="やめる";
             document.queryselector('.div1').style.border = "solid";
         }
-        
+
     　　function onl(){
     　　  document.getElementById('audio1').load();
     　　  document.getElementById('audio2').load();
@@ -142,7 +142,7 @@
         function start3(){
             text2.innerHTML = "残り" + time + "秒";
             if(time <1){
-                
+
                 clearInterval(count)
                 nodeco();
                 document.getElementById('audio2').load();
@@ -156,7 +156,7 @@
         function start4(){
             count = setTimeout(start3,1000)
         }
-        
+
         function question(){
             sp1.innerHTML = "シソ"
             sp2.innerHTML = "ヨーグルト"
@@ -193,7 +193,7 @@
             sp3.innerHTML = "学校の校庭1週分"
             deco();
         }
-        
+
         function check(){
         if(point1 === "2"){
             document.getElementById('audio2').play();
@@ -202,7 +202,7 @@
         }
         else if(point1 === "1"){
             document.getElementById('audio2').play();
-         alert("残念")   
+         alert("残念")
          setTimeout(start12,2000)
         }
         else if(point1 === "3"){
@@ -212,7 +212,7 @@
             setTimeout(start12,2000)
         }
         }
-        
+
         function check2(){
             if(point1 === "1"){
                 document.getElementById('audio1').play();
@@ -222,7 +222,7 @@
         }
         else if(point1 === "2"){
             document.getElementById('audio2').play();
-         alert("残念")   
+         alert("残念")
          setTimeout(start13,2000)
         }
         else if(point1 === "3"){
@@ -231,7 +231,7 @@
             setTimeout(start13,2000)
         }
         }
-        
+
          function check3(){
         if(point1 === "2"){
             document.getElementById('audio2').play();
@@ -240,7 +240,7 @@
         }
         else if(point1 === "1"){
             document.getElementById('audio2').play();
-         alert("残念")   
+         alert("残念")
          setTimeout(start14,2000)
         }
         else if(point1 === "3"){
@@ -250,17 +250,17 @@
             setTimeout(start14,2000)
         }
         }
-        
+
         function check4(){
             if(point1 === "1"){
                 document.getElementById('audio2').play();
             alert("残念")
-            
+
             setTimeout(start15,2000)
         }
         else if(point1 === "2"){
             document.getElementById('audio1').play();
-         alert("正解")   
+         alert("正解")
          rank1++;
          setTimeout(start15,2000)
         }
@@ -270,7 +270,7 @@
             setTimeout(start15,2000)
         }
         }
-        
+
         function check5(){
             if(point1 === "1"){
                 document.getElementById('audio1').play();
@@ -280,7 +280,7 @@
         }
         else if(point1 === "2"){
             document.getElementById('audio2').play();
-         alert("残念")   
+         alert("残念")
          setTimeout(start16,2000)
         }
         else if(point1 === "3"){
@@ -289,7 +289,7 @@
             setTimeout(start16,2000)
         }
         }
-        
+
         function check6(){
             if(point1 === "1"){
                 document.getElementById('audio1').play();
@@ -299,7 +299,7 @@
         }
         else if(point1 === "3"){
             document.getElementById('audio2').play();
-         alert("残念")   
+         alert("残念")
          setTimeout(start17,2000)
         }
         else if(point1 === "2"){
@@ -308,13 +308,13 @@
             setTimeout(start17,2000)
         }
         }
-        
+
         function deco(){
           document.querySelector('.an11').style.backgroundColor = "pink"
           document.querySelector('.an22').style.backgroundColor = "pink"
           document.querySelector('.an33').style.backgroundColor = "pink"
         }
-        
+
         function nodeco(){
           document.querySelector('.an11').style.backgroundColor = ""
           document.querySelector('.an22').style.backgroundColor = ""
@@ -325,7 +325,7 @@
           text1.innerHTML = ""
           text2.innerHTML = ""
         }
-        
+
         function ans1(){
             nodeco();
             clearInterval(count)
@@ -425,12 +425,22 @@
         body span{
             font-size:50px;
         }
-        body img{
-            width:200px;
-            padding:0px;
-            margin:0px;
-            position:absolute;top:17px;left:5px;
+        @media screen and (min-width:1700px){
+           body img{
+               width:300px;
+               padding:0px;
+               margin:0px;
+               position:absolute;top:10px;left:5px;
+           }
         }
+       @media screen and (max-width:1600px){
+          body img{
+              width:200px;
+              padding:0px;
+              margin:0px;
+              position:absolute;top:17px;left:5px;
+          }
+       }
         .div1{
             position:absolute;top:18px;left:80%;
             width:120px;
@@ -446,7 +456,7 @@
         }
         .p2{
             font-size:30px;
-            
+
         }
         .rank{
             font-size:100px;

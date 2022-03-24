@@ -21,7 +21,6 @@ body {
 }
   .top{
 padding-left:5%;
-padding-top:20%;
   }
 
 .top div{
@@ -153,7 +152,7 @@ font-size:15px;
    padding-top:10px;
    padding-bottom:0px;
    padding-left:2px;
-   width:375px;
+   width:100vw;
    font-size:13px;
      display: block;
       height:60px;

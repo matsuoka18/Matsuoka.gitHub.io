@@ -9,7 +9,7 @@
     </head>
     <body>
         <div class="div2">
-          <img src="matsu.jpeg" width="250px"height="50px">
+          <img src="img/matu6.jpeg" width="250px"height="50px">
         <h1 class="h1">カスタマイズページ</h1>
         <div class="top">
         <div><a href="index.html">トップページ</a></div>
@@ -31,9 +31,95 @@
       </pre>
       </div>
     <style>
-        .top{
-            position:absolute;left:70%;
-        }
+    @media screen and (min-width:1700px){
+      .top{
+        position:absolute;left:80%;top:8%;
+        font-size:15px;
+      }
+      .checktext{
+          font-size:20px;
+          position:absolute;left:55%;top:18%;
+      }
+      .checkbuttom{
+          font-size:15px;
+          position:absolute;left:55%;top:5  2%;
+          width:120px;
+          height:30px;
+          text-align:center;
+          padding-top:2px;
+      }
+      .checkbuttom:hover{
+          background-color:black;
+          color:white;
+      }
+    }
+    @media screen and (min-width:1100px){
+      .top{
+        position:absolute;left:65%;top:8%;
+        font-size:15px;
+      }
+      .checktext{
+          font-size:20px;
+          position:absolute;left:55%;top:20%;
+      }
+      .checkbuttom{
+          font-size:15px;
+          position:absolute;left:55%;top:59%;
+          width:120px;
+          height:30px;
+          text-align:center;
+          padding-top:2px;
+      }
+      .checkbuttom:hover{
+          background-color:black;
+          color:white;
+      }
+    }
+     @media screen and (min-width:700px){
+      .top{
+        position:absolute;left:65%;top:5%;
+        font-size:13px;
+      }
+      .checktext{
+          font-size:20px;
+          position:absolute;left:55%;top:12%;
+      }
+      .checkbuttom{
+          font-size:15px;
+          position:absolute;left:55%;top:34.5%;
+          width:120px;
+          height:30px;
+          text-align:center;
+          padding-top:2px;
+      }
+      .checkbuttom:hover{
+          background-color:black;
+          color:white;
+      }
+    }
+
+    @media screen and (max-width:500px){
+      .top{
+        position:absolute;left:70%;
+      }
+      .checktext{
+          font-size:20px;
+          position:absolute;left:55%;top:25%;
+      }
+      .checkbuttom{
+          font-size:15px;
+          position:absolute;left:55%;top:62%;
+          width:120px;
+          height:30px;
+          text-align:center;
+          padding-top:2px;
+      }
+      .checkbuttom:hover{
+          background-color:black;
+          color:white;
+      }
+    }
+
         .mai{
             font-size:20px;
         }
@@ -52,25 +138,11 @@
             background-color:black;
             color:white;
         }
-        .checktext{
-            font-size:20px;
-            position:absolute;left:55%;top:25%;
-        }
-        .checkbuttom{
-            font-size:15px;
-            position:absolute;left:55%;top:62%;
-            width:120px;
-            height:30px;
-            text-align:center;
-            padding-top:2px;
-        }
-        .checkbuttom:hover{
-            background-color:black;
-            color:white;
-        }
+
     </style>
     <script>
         let text = document.getElementById('tex');
+        text.addEventListener('keypress',key_event)
         let p1 = document.getElementById('p1');
         let checkbutton = document.getElementById('checkbutton');
         function check(){
@@ -80,6 +152,13 @@
         }
         function end(){
             location.href="index4.1.html"
+        }
+        function key_event(a){
+          if(a.keyCode === 13){
+              p1.innerHTML = text.value;
+            checkbutton.innerHTML = "送信"
+            document.querySelector('.checkbuttom').style.border = "1px solid"
+          }
         }
     </script>
     </body>

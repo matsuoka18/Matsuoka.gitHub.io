@@ -4,16 +4,15 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <script type="text/javascript" src="index3.js"></script>
-        <link rel="stylesheet" href="style2.1.css">
+          <link rel="stylesheet" href="style2.6.css" nmedia="screen and (min-width:600px)">
         <title>
             商品一覧
         </title>
-        <img onclick="start()"src="matu6.jpeg"class="imgg">
+        <img onclick="start()"src="img/matu6.jpeg"class="imgg">
     </head>
     <body onload="start()">
         <div class="div2">
-
-        <h1 class="h1">商品一覧</h1>
+        <h1 class="h1"　id="hh1">商品一覧</h1>
         <div class="top">
         <div><a href="index.html">トップページ</a></div>
         <div><a href="index6.1.html">当社について</a></div>
@@ -22,10 +21,9 @@
         </div>
         <div class="all">
         <p class="p1">人気のある商品</p>
+
   <div class="div1">
-         <img src="fam.jpg" class="width1">
-
-
+         <img src="img/fam.jpg" class="width1">
     <div class="com">
       <div class="buy">
       <h3>お手軽セット</h3>
@@ -35,9 +33,9 @@
 </br>
                    ¥670円（月額）</p>
   </div>
-
+</div>
   <div class="div3">
-    <img onclick="stop()"src="doc.png" class="width1">
+    <img onclick="stop()"src="img/doc.png" class="width1">
     <div class="com">
     <div class="buy">
     <h3>スタンダートセット</h3>
@@ -51,7 +49,7 @@
   </div>
   </div>
   <div class="div4">
-    <img onclick="music1()" src="pic1.jpg" class="width1">
+    <img onclick="music1()" src="img/pic1.jpg" class="width1">
     <div class="com">
     <div class="buy">
     <h3>プレミアムセット</h3>
@@ -66,20 +64,20 @@
   </div>
   <p class="p1">子供むけの商品</p>
   <div class="div5">
-        <img src="baby.jpg" class="width1">
+        <img src="img/baby.jpg" class="width1">
     <div class="com">
     <div class="buy">
     <h3>初めての子育てセット</h3>
         <div onclick="mo3()"class="buy1">申し込み</div>
       </div>
-    <p class="pp4">　　　初めての育児とういうことで、安い値段の割に高いサービスが得られます。</br>
+    <p class="pp4">初めての育児とういうことで、安い値段の割に高いサービスが得られます。</br>
                                               また専門の先生からのアドバイスも！</br>
                    　　　　　　　　　　　 ¥800円
     </p>
   </div>
   </div>
   <div class="div6">
-    <img onclick="stop()"src="baby2.jpg"class="width1">
+    <img onclick="stop()"src="img/baby2.jpg"class="width1">
     <div class="com">
     <div class="buy">
     <h3>育児寄り添いセット</h3>
@@ -93,7 +91,7 @@
   </div>
   </div>
   <div class="div7">
-    <img onclick="music1()" src="baby3.jpg" class="width1">
+    <img onclick="music1()" src="img/baby3.jpg" class="width1">
     <div class="com">
     <div class="buy">
     <h3>育児費援助セット</h3>
@@ -108,7 +106,7 @@
   </div>
         <p class="p1">ご高齢の方向けの商品</p>
   <div class="div8">
-        <img src="Bba1.jpg"class="width1">
+        <img src="img/Bba1.jpg"class="width1">
     <div class="com">
     <div class="buy">
     <h3>シニア保険セット</h3>
@@ -122,7 +120,7 @@
   </div>
   </div>
   <div class="div9">
-    <img onclick="stop()"src="Bba2.jpg" class="width1">
+    <img onclick="stop()"src="img/Bba2.jpg" class="width1">
     <div class="com">
     <div class="buy">
     <h3>介護サービスセット</h3>
@@ -136,7 +134,7 @@
   </div>
   </div>
   <div class="div10">
-    <img onclick="music1()" src="Bba3.jpg" class="width1">
+    <img onclick="music1()" src="img/Bba3.jpg" class="width1">
     <div class="com">
     <div class="buy">
     <h3>シニア医療保険</h3>
@@ -167,6 +165,7 @@ if(height == 667 && width == 375){
 		link.type = 'text/css';
 		var h = d.getElementsByTagName('head')[0];
 		h.appendChild(link);
+clean();
 }
 else if(height == 812 && width == 375){
   var d = document;
@@ -176,6 +175,7 @@ else if(height == 812 && width == 375){
 		link.type = 'text/css';
 		var h = d.getElementsByTagName('head')[0];
 		h.appendChild(link);
+    clean();
 }
 else if(height == 896 && width == 414){
   var d = document;
@@ -185,6 +185,7 @@ else if(height == 896 && width == 414){
 		link.type = 'text/css';
 		var h = d.getElementsByTagName('head')[0];
 		h.appendChild(link);
+    clean();
 }
 else if(height == 844 && width == 390){
   var d = document;
@@ -194,6 +195,7 @@ else if(height == 844 && width == 390){
 		link.type = 'text/css';
 		var h = d.getElementsByTagName('head')[0];
 		h.appendChild(link);
+    clean();
 }
 else if(height == 926 && width == 428){
   var d = document;
@@ -203,7 +205,20 @@ else if(height == 926 && width == 428){
 		link.type = 'text/css';
 		var h = d.getElementsByTagName('head')[0];
 		h.appendChild(link);
+    clean();
 }
+else if(height > 700 && width > 700){
+  let x = document.querySelector('.h1').getBoundingClientRect().top;
+  let x1 = x + 40 + 'px'
+  document.querySelector('.top').style.position = "absolute";
+  document.querySelector('.top').style.top = x1 ;
+}
+}
+function clean(){
+  let x = document.querySelector('.h1').getBoundingClientRect().top;
+  let x1 = x + 40 + 'px'
+  document.querySelector('.top').style.position = "absolute";
+  document.querySelector('.top').style.top = x1 ;
 }
           function mo(){
             location.href="index5.html"

@@ -10,9 +10,13 @@ body {
 .ex{
     float:left;
 }
-.top{
-    position:absolute;left:75%;top:10%;
+.imgg{
+  width:250px;height:50px;
 }
+  .top{
+      position:absolute;left:75%;top:7%;
+  }
+
 .top div{
     color:black;
     display:inline-block;
@@ -51,6 +55,7 @@ body {
 .div1{
     padding:5px;
     background-color:#FFCC66;
+    height:225px;
 }
 .div3{
     padding:5px;
@@ -92,9 +97,11 @@ body {
 .all{
     width:100vw;
 }
-.pp1{
-    position:absolute;left:35%;top:30%;
-    font-size:20px;
+@media screen and (max-width:376px){
+ .pp1{
+   position:absolute;left:35%;top:50%;
+   font-size:200px;
+ }
 }
 .pp2{
     position:absolute;left:35%;top:60%;

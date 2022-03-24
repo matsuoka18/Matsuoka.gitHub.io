@@ -4,17 +4,17 @@
         <meta charset="utf-8">
         <title>当社について</title>
     </head>
-    <body>
-          <a href="index.html"><img class="img2" src="matsu.jpeg" width="240px"></a>
-        <h1>当社について</h1>
+    <body onload="start()">
+          <a href="index.html"><img class="img2" src="img/matu6.jpeg" width="240px"></a>
+        <h1 class="h1">当社について</h1>
         <div class="top">
         <div><a href="index.html">トップページ</a></div>
         <div><a href="index6.2.html">サイトマップ</a></div>
         <div><a href="index6.html">お問い合わせ</a></div>
         </div>
-        <img class="img2" src="img/matsu.jpeg" width="300px">
-       
-        <p class="p1">株式会社明治松尾生命</p>
+        <img class="img2" src="img/matu6.jpeg" width="300px">
+
+        <p class="p1">株式会社松尾生命</p>
         <div class="picture">coming soon</div>
         <p class="name">社長：松尾和弥</p>
         <div class="history">
@@ -34,9 +34,9 @@
 1966年　（）　顧客数4万人
 　　　　　　　　　　
 1989年　（）　本社　東京移転
-　　　　　　　　　  
+　　　　　　　　　
 2004年　（）　お客様満足度1位
-　　　　　　　　　  
+　　　　　　　　　
 2022年　（）　新本社完成
                 </p>
             </pre>
@@ -55,10 +55,39 @@
             }
             body h1{
                 border-bottom:1px solid;
-            }
-                   .top{
-    position:absolute;left:75%;top:10%;
+            }@media screen and (min-width:1700px){
+              .top{
+     position:absolute;left:80%;top:8%;
+     font-size:15px;
+     }
+     .history{
+      position:absolute;left:55%;top:11.7%;
+      height:650px;
+      border-left:1px solid;
+     }
+     .kk{
+         position:absolute;top:81.2%;
+         border-top:1px solid;
+         width:100%;
+         font-size:18px;
+     }
+    }
+    @media screen and (max-width:1600px){
+      .top{
+position:absolute;left:75%;top:10%;
 }
+
+.history{
+ position:absolute;left:55%;
+ height:650px;
+ border-left:1px solid;
+}
+.kk{
+    border-top:1px solid;
+    font-size:18px;
+}
+    }
+
 .top div{
     color:black;
     display:inline-block;
@@ -83,11 +112,6 @@
     font-size:20px;
     font-weight:800;
 }
-.history{
- position:absolute;left:55%;top:16%;
- height:650px;
- border-left:1px solid;
-}
 .hon{
     padding-left:50px;
     font-size:20px;
@@ -98,15 +122,27 @@
     font-size:20px;
     font-weight:700;
 }
-.kk{
-    position:absolute;top:105%;
-    border-top:1px solid;
-    font-size:18px;
-}
+
 .midasi{
+   width:100vw;
     font-weight:700;
     padding-top:20px;
 }
         </style>
+        <script>
+        let x = document.querySelector('.h1').getBoundingClientRect().top;
+        let x1 = x + 38 + 'px';
+        let x2 = x + 66 + 'px';
+        let x3 = parseInt(x2);
+        let x4 = x3 + 650 + 'px';
+        document.querySelector('.top').style.position = "absolute";
+        document.querySelector('.top').style.top = x1 ;
+
+        document.querySelector('.history').style.position = "absolute";
+        document.querySelector('.history').style.top = x2 ;
+
+        document.querySelector('.kk').style.position = "absolute";
+        document.querySelector('.kk').style.top = x4 ;
+        </script>
     </body>
 </html>

@@ -6,8 +6,8 @@
             申し込みページ
         </title>
     </head>
-    <body>
-        <a href="index.html"><img class="img2" src="matsu.jpeg" width="240px"></a>
+  <body onload="start()">
+        <a href="index.html"><img class="img2" src="img/matu6.jpeg" width="240px"></a>
         <h1>申し込みページ</h1>
         <div class="top">
         <div><a href="index.html">トップページ</a></div>
@@ -28,7 +28,7 @@
 　　<label class="div">その他<input class="text" type="text" id="text8"value=""></label>
     </div>
     <div class="ou1">
-    <p class="out1" id="kaku"></p>    
+    <p class="out1" id="kaku"></p>
     <p class="out" id="out1"></p>
     <p class="out" id="out2"></p>
     <p class="out" id="out3"></p>
@@ -39,8 +39,15 @@
     <p class="out" id="out8"></p>
     <div class="kete" id="load" onclick="next()"></div>
     </div>
-    <input class="button" type="button" onclick="check()" value="確認する">    
+    <input class="button" type="button" onclick="check()" value="確認する">
         <script>
+        function start(){
+        let y =  document.querySelector('h1').getBoundingClientRect().top;
+        let x = parseInt(y);
+        let x1 = x + 'px';
+          document.querySelector('.top').style.position = "absolute";
+          document.querySelector('.top').style.top = x1 ;
+        }
         let kaku = document.getElementById('kaku');
         let out1 = document.getElementById('out1');
         let out2 = document.getElementById('out2');
@@ -127,7 +134,7 @@
                 font-weight:600;
             }
                               .top{
-    position:absolute;left:75%;top:10%;
+          position:absolute;left:60%;
 }
 .top div{
     color:black;

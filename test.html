@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body onload="start()">
+    <h1 class="h1">hello</h1>
+    <button id="button"class="button1"onclick="st()">hello</button>
+    <script>
+    var size = window.innerWidth;
+  var height = window.screen.height;
+  var width = window.screen.width;
+   function star(){
+alert(height + "px")
+alert(width+"px")
+alert(size)
+if(height == 1080 && width == 1920){
+  var d = document;
+		var link = d.createElement('link');
+		link.href = 'test2.css';
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		var h = d.getElementsByTagName('head')[0];
+		h.appendChild(link);
+}
+}
+function st(){
+  alert("hello");
+ let x = document.querySelector('.h1').getBoundingClientRect().top;
+ let x1 = parseInt(x);
+ let y =  x1 + 100;
+ alert(x)
+ alert(y)
+ document.querySelector('.button1').style.position = "absolute";
+  document.querySelector('.button1').style.top = y;
+}
+    </script>
+  </body>
+</html>

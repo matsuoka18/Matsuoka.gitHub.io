@@ -4,8 +4,8 @@
         <meta charset="utf-8">
         <title>サイトマップ</title>
     </head>
-    <body>
-          <a href="index.html"><img class="img2" src="matsu.jpeg" width="240px"></a>
+    <body onload="start()">
+          <a href="index.html"><img class="img2" src="img/matu6.jpeg" width="240px"></a>
         <h1>サイトマップ</h1>
         <div class="top">
         <div><a href="index.html">トップページ</a></div>
@@ -40,31 +40,7 @@
             .top{
     position:absolute;left:75%;top:10%;
 }
-.border{
-    position:absolute;top:23.5%;left:19%;
-    width:42px;
-    border:1px solid;
-    transform: rotate(100deg);
-}
 
-.border2{
-    position:absolute;top:34%;left:19%;
-    width:42px;
-    border:1px solid;
-    transform: rotate(100deg);
-}
-.border3{
-    position:absolute;top:62.5%;left:19%;
-    width:42px;
-    border:1px solid;
-    transform: rotate(100deg);
-}
-.border4{
-    position:absolute;top:73%;left:19%;
-    width:42px;
-    border:1px solid;
-    transform: rotate(100deg);
-}
 .top div{
     color:black;
     display:inline-block;
@@ -101,5 +77,15 @@
     background-color:whitesmoke;
 }
         </style>
+    <script>
+      function start(){
+
+        let y =  document.querySelector('h1').getBoundingClientRect().top;
+        let x = parseInt(y);
+        let x1 = x + 'px';
+          document.querySelector('.top').style.position = "absolute";
+          document.querySelector('.top').style.top = x1 ;
+      }
+    </script>
     </body>
 </html>

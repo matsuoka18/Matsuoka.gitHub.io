@@ -1,61 +1,82 @@
 <!DOCTYPE html>
-<html lang="ja">
+
+<html>
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width" />
-<title>サッカー部</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
- <meta name="viewport" content="width=device-width,initial-scale=1">
- <link rel="stylesheet" href="mai.css" media="screen and (max-width:760px)">
- <link rel="stylesheet" href="mak.css" media="screen and (min-width:800px)">
- <script type="text/javascript" src="mac.js"></script>
+  <meta charset="utf-8">
+  <title>松尾生命</title>
+  <link rel="stylesheet" href="style.css" media="(min-width:240px)">
+  <link rel="stylesheet" href="style1.css" media="(min-width:1700px)">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Satisfy&family=Stoke&family=Yellowtail&family=Geo&family=Oswald&family=Lobster&family=Cookie&family=Chewy&family=Limelight&family=Sacramento&family=Plaster&display=swap" rel="stylesheet">
 </head>
+
+<header id="head">
+  <img class="img1" src="img/matu6.jpeg">
+  <div class="div1">
+  <ul class="gnav">
+    <li><a>サービス一覧</a>
+  <ul>
+    <li><a href="index3.html">商品一覧</a></li>
+    <li><a href="index2.html">健康クイズ</a></li>
+  </ul>
+    </li>
+  </ul>
+  <p onclick="otoo()"class="p1">サイトマップ</p>
+  <p onclick="oo()"class="p1">当社について</p>
+  <p onclick="oto()"class="p1">お問い合わせ</p>
+
+  </div>
+</header>
 <body>
-<h4 class="h1">サッカー部特設サイト</h4>
-<div class="b1"><button onclick="button1()" class="button1"><span class="s1">エンタメ</span></button><button onclick="button2()" class="button1"><span class="s1">明治松尾生命
-                                                                                                                               </span></button>
-<button onclick="button3()" class="button1"><span class="s1">予定</span></button><button onclick="button4()" class="button1"><span class="s1">お知らせ</span></button></div>
-<img class="img1"src="Tebiro.PNG">
- <font size="2">
-<p class="p1">このサイトではサッカー部にまつわる色々なことを載せていきます</p>
- </font>
- <a href="fam.jpg" download="fam.jpg">ダウンロード</a>
-  <button onclick="gate()">秘密</button>
-<script type="text/javascript">
-   function gate() {
-      var UserInput = prompt("パスワードを入力して下さい:","");
-      location.href = UserInput + ".html";
-   }
- </script>
- <audio id="au1">
-  <source src="umo .mp3"autoplaytype="audio/mp3">
- </audio>
-<p class="p4">秘密ページコーナー</p>
+<section class="shop">
+  <img class="img2" src="img/matu6.jpeg">
+  <h2 class="title">松尾生命について</h2>
 
-<script type="text/javascript">
-   function gate() {
-      var UserInput = prompt("パスワードを入力して下さい:","");
-      location.href = UserInput + ".html";
-   }
-   function p1(){
-     location.href= "dou.html"
-   }
-   function button1(){
-   location.href="entame.html"
-}
-   function button2(){
-   location.href="gika.html"
-}
-   function button3(){
-   location.href="https://www.yahoo.com"
-}
-   function button4(){
-   location.href="https://www.apple.com"
-}
-   function button6(){
-   location.href="himihimi.html"
-}
+<pre><p>
+私たち松尾生命が大切にしなければいけないこと。
+
+それは、全てのお客様が安心して暮らせるよう陰で支えること。
+弊社の理念である、「安心を、いつまでも、どこまでも」という言葉に込めた想いです。
+こうした想いを、とコーポレートロゴに表現しました。
+カラーは、お客さまとともに成長したいという意味を込めた「若葉」の緑、
+そして陰で支えるという意味を込め、弊社を表す青がお客様を表す赤と重なっています。
+コーポレートロゴの左右に伸びるフォルムは、「お客さまとの末永いお付き合い」を表しています。
+    </p></pre>
+</section>
+
+<section class="photo">
+  <h2 class="title">おすすめの商品</h2>
+  <div onclick="html()">
+    <img src="img/fam.jpg" width="240">
+    <h3>お手軽セット</h3>
+  </div>
+
+  <div onclick="html()">
+    <img src="img/doc.png" width="240">
+    <h3>スタンダートセット</h3>
+  </div>
+
+  <div onclick="html()">
+    <img src="img/pic1.jpg" height="155"width="240">
+    <h3>プレミアムセット</h3>
+  </div>
+  <p><a href="index3.html">もっと詳しく→</a></p>
+</section>
+<script>
+  function oto(){
+    location.href="index6.html"
+  }
+  function oo(){
+    location.href="index6.1.html"
+  }
+  function otoo(){
+    location.href="index6.2.html"
+  }
+  function html(){
+    location.href= "index3.html"
+  }
 </script>
-
 </body>
 </html>
