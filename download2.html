@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+<body>
+  <a onclick="downloadImgs()" id="download" class="btn btn-primary">画像ダウンロード</a>
+  <script>
+  'use strict';
+
+  // 一括画像ダウンロード
+  function downloadImgs(){
+    downloadImg('check.png');
+    downloadImg('walk.png');
+  }
+
+  // 画像ダウンロード
+  function downloadImg(fileName){
+    // ファイル情報
+    const url = './imgs/' + fileName;
+
+    // IE用
+    if(window.navigator.msSaveOrOpenBlob){
+      let xhr = new XMLHttpRequest();
+      xhr.open('GET', url);
+      xhr.responseType = 'blob';
+      xhr.onload = function(){
+        if(xhr.status !== 200){
+          return false;
+        }
+        window.navigator.msSaveOrOpenBlob(xhr.response, fileName);
+      }
+      xhr.send();
+    }else{ // Chromeなど
+      let link = document.createElement('a');
+      link.href= url;
+      link.download = fileName;
+
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+  }
+  </script>
+  </body>
+</html>
