@@ -1,0 +1,164 @@
+/*LINEbotデモサイト*/
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>LINEbotデモサイト</title>
+    <script src="line.js"></script>
+<link rel="stylesheet" href="line.css">
+  </head>
+  <body onload="let()">
+    <div id="div1">
+    <h1 id="h1">LINEbotのテストページ</h1>
+<div id="noti"class="noti">
+  <h2 id="h2">LINE Notify</h2>
+<input type="text" id="text1"value=""placeholder="ここに入力">
+<button onclick="go()">送信</button>
+</div>
+<div id="bot"class="bot">
+  <h2>LINE bot→スプレッドシート→webページ</h2>
+  <p id="font1"></p>
+<button onclick="start()">情報</button>
+<button id="bu"class="bu" onclick="func()">印刷</button>
+</div>
+<div id="cha"class="cha">
+  <h2>LINE botの変更ページ</h2>
+  <button onclick="change()">botを編集</button>
+</div>
+
+</div>
+<p id="font"></p>
+
+<p id="font2"></p>
+<p id="font3"></p>
+</div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+let font = document.getElementById('font');
+let font1 = document.getElementById('font1');
+let input = document.getElementById('text1');
+let div1 = document.getElementById('div1');
+let noti = document.getElementById('noti');
+let bot = document.getElementById('bot');
+let cha = document.getElementById('cha');
+let h1 = document.getElementById('h1');
+let h2 = document.getElementById('h2');
+input.addEventListener('keypress',k);
+let te = '';
+let answer = '';
+let po = 0;
+let url = "https://script.googleusercontent.com/macros/echo?user_content_key=jQjdngfCJHRMZMGfCiikFlaW4BuJEqklHSLpLAAI-qy_Mvyfw3wo1XuM7ZNRdBcll3zihE6iMI1v1LgDi4iQGH-L3nQH3p4-m5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnGeOqt48Xv4nghwv8OEC8_nmksVNnlRoOJ1vhRgzo6aymVLFitZPc00BbTgBYJqR2BjadWitmDQR&lib=MMWALB-6RJ0Ih8d1w5Ot9V9FDQgSYcHqn";
+function start(){
+$.getJSON(url,(data)=>{
+  console.log(data);
+  te = JSON.stringify(data);
+  console.log(te);
+ text = te.indexOf('ID');
+ text2 = te.indexOf('passward');
+ text3 = te.indexOf('"}');
+ answer = te.substring(text+5,text2-3);
+ answer2 = te.substring(text2+11,text3);
+ font1.innerHTML = "認証ID:"+answer+"パスワード:"+answer2;
+ let reza = window.confirm('LINEに送信しますか？');
+ if(reza){
+   $.ajax({
+     url: "https://maker.ifttt.com/trigger/kazuya/with/key/c_vpO05zoegXWA3suVbXNy",
+     type: "POST",
+     data: {value1:answer,value2:answer2},
+     complete: function(){alert("成功")}
+   });
+ }else{
+  alert("送信しませんでした"); 
+ }
+});
+};
+function k(key){
+  if(key.keyCode == 13){
+    go();
+  }
+}
+function func(){
+document.getElementById('div1').style.visibility = "hidden";
+window.print();
+}
+function go(){
+  if( input.value == "4-10:34/matsuoka" && point == 10 ){
+    alert("hello");
+   h1.innerHTML = "確認しました";
+   h2.innerHTML = "ページへ移動します";
+   input.value = '';
+   setTimeout(jump,4000);
+  }
+  else if(po == 5){
+    alert("5回間違えたためページを閉じます");
+    window.close();
+  }
+else if( point == 10 || input.value　== "4-10:34/matsuoka"){
+    alert("間違っています");
+    po++;
+    input.value = '';
+  }
+  else if(point == 0){
+  $.ajax({
+   url: "https://maker.ifttt.com/trigger/kazuya/with/key/c_vpO05zoegXWA3suVbXNy",
+   type: "POST",
+   data: {value1:input.value},
+   complete: function(){alert("成功")
+   next();
+ }
+ });
+}
+}
+
+function next(){
+  input.value="";
+}
+function change(){
+ cha.style.visibility="hidden";
+ bot.style.visibility="hidden";
+ h1.innerHTML = "パスワードを入力";
+  h2.innerHTML = "本人確認";
+  point = 10;
+}
+function jump(){
+  location.href="https://script.google.com/d/1G2ew4abXIEYpWqCnz50Jw8UL-gpNUDdQvUFJfofyffFSs5F00Q3mSOjg/edit";
+}
+function let(){
+  point =0;
+
+}
+
+
+
+
+
+
+
+
+
+var on = {
+  number : "hello",
+  name : 30,
+  "number-2nd": "koko",
+  fo:function(){
+    alert("hello!!everynoe!!");
+  }
+};
+let dede = {
+  names:[
+    {
+    "名字":"松尾",
+    "名前":"和也",
+    "性別":"男"
+  },
+  {
+    "出身地":"神奈川県",
+    "出身中学校":"鎌倉市立手広中学校",
+    "入学高校":"山手学院"
+  }
+]
+}
+
+</script>
+  </body>
+</html>
