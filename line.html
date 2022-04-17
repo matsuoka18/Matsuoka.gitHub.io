@@ -55,7 +55,7 @@ $.getJSON(url,(data)=>{
   console.log(te);
  text = te.indexOf('ID');
  text2 = te.indexOf('passward');
- text3 = te.indexOf('"}');
+ text3 = te.indexOf('!');
  answer = te.substring(text+5,text2-3);
  answer2 = te.substring(text2+11,text3);
  font1.innerHTML = "認証ID:"+answer+"パスワード:"+answer2;
