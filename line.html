@@ -102,13 +102,14 @@ else if( point == 10 || input.value　== "4-10:34/matsuoka"){
   }
   else if(point == 0){
   $.ajax({
-   url: "https://maker.ifttt.com/trigger/kazuya/with/key/c_vpO05zoegXWA3suVbXNy",
+   url: "https://maker.ifttt.com/trigger/japan/with/key/c_vpO05zoegXWA3suVbXNy",
    type: "POST",
    data: {value1:input.value},
    complete: function(){alert("成功")
    next();
  }
  });
+  
 }
 }
 
