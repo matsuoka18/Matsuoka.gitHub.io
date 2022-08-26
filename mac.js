@@ -1,10 +1,8 @@
-function {
-var media = document.getElementById("au1");
-media.load();
-media.play();
-location.href="https://profile.ameba.jp/ameba/nonbirilin/"
+function start(){
+if(document.cookie.indexOf("tebija=dasai")!=-1){
+return;
+}else{
+alert("ログインしてください");
+location.href="https://matsuoka18.github.io/soccer/index.html";
 }
-
-function divw(){
-document.getElementById("au1").pause();
 }
