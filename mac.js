@@ -1,12 +1,14 @@
 function start(){
+document.getElementById("allall").style.visibility = "hidden";
 if(document.cookie.indexOf("tebija=dasai")!=-1){
 document.getElementById("allall2").style.display = "none";
 document.getElementById("allall2").style.opacity = "0";
+document.getElementById("allall").style.visibility = "visible";
 return;
 }else{
 alert("ログインしてください");
 document.getElementById("allall").style.visibility = "hidden";
-}
+
 }
 
 function check(){
