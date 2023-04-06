@@ -8,7 +8,7 @@
  <meta name="viewport" content="width=device-width,initial-scale=1">
  <link rel="stylesheet" href="mai.css" media="screen and (max-width:760px)">
  <link rel="stylesheet" href="mak.css" media="screen and (min-width:800px)">
- <script type="text/javascript" src="mac.js"></script>
+ <!--script type="text/javascript" src="mac.js"></script-->
  <meta name="google-site-verification" content="M3IJtz8R27_3N0HHnjZfY0ECxGoDwzejOKo7lQMbU3E" />
 </head>
 <body onload="start()">
@@ -32,6 +32,8 @@
   
  <a onclick="line()">LINE</a>
  <a onclick="food()">foodshare</a>
+ <a href="https://yamate-casino.github.io/yamate-casino/">yamate-casino TOP</a>
+ <a href="https://yamate-casino.github.io/yamate-casino/start">slot</a>
  <audio id="au1">
   <source src="umo .mp3"autoplaytype="audio/mp3">
  </audio>
@@ -74,6 +76,21 @@
  function food(){
  let window = open("https://matsuoka18.github.io/foodshare");
   window.open();
+ }
+ function start(){
+    document.getElementById("allall").style.display = "none";
+ }
+ function check(){
+ t1 = document.getElementById("text1").value;
+ t2 = document.getElementById("text2").value;
+ t3 = document.getElementById("text3").value;
+ if(t1 == "佐藤雅彦" && t2 == "高梨" && t3 == 3){
+    document.getElementById("allall2").style.display = "none";
+    document.getElementById("allall").style.display = "block";
+    document.getElementById("allall").style.opacity = 1;
+}else{
+    alert("違います");
+}
  }
 </script>
 
